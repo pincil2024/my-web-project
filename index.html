@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drag-and-Drop Syllable Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="level-selection">
+        <h1>"Main Suku Kata"</h1>
+        <h2>"Pilih Level"</h2>
+        <button onclick="selectLevel(1)">Level 1</button>
+        <button onclick="selectLevel(2)">Level 2</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <button class="go-back-btn" onclick="selectLevelHome()">
+            <img src="images/gobackbutton.svg" alt="Go back">
+        </button>
+        <h1>"Main Suku Kata"</h1>
+        <div id="progress-tracker" class="progress-tracker">0/10</div>
+        <div id="hint-image"></div>
+        <div id="syllable-bank"></div>
+        <div id="drop-area"></div>
+        
+        <div id="balloon-container" class="balloon-hidden"></div>
+
+    </div>
+    <div id="popup-modal">
+        <div id="popup-content" class="popup-message"></div>
+    </div>
+    <audio id="pop-sound" src="sounds/balloon-pop.mp3" preload="auto"></audio>
+    <img id="popup-button" src="images/play-again.svg" alt="Play Again" onclick="restartGame()" />
+   <script src="script.js"></script>
+</body>
+</html>
